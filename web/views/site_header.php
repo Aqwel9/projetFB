@@ -73,7 +73,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="divider"></li>
-                            <li>
+                            <li title="ajout nouveau quizz">
                                 <a href="<?php echo BASE_URL;?>admin/addQuizz">
                                     <div style="text-align: center;">
                                         <i class="fa fa-plus-circle fa-2x"></i>
@@ -81,7 +81,7 @@
                                 </a>
                             </li>
                             <li class="divider"></li>
-                            <li>
+                            <li title="Liste des quizzs">
                                 <a href="<?php echo BASE_URL;?>admin/listQuizz">
                                     <div style="text-align: center;">
                                         <i class="fa fa-list fa-2x"></i>
@@ -89,7 +89,7 @@
                                 </a>
                             </li>
                             <li class="divider"></li>
-                            <li>
+                            <li title="Liste des utilisateurs">
                                 <a href="<?php echo BASE_URL;?>admin/listUser">
                                     <div style="text-align: center;">
                                         <i class="fa fa-users fa-2x"></i>
@@ -105,7 +105,7 @@
                                 </a>
                             </li>
                             <li class="divider"></li>
-                            <li>
+                            <li title="Administration">
                                 <a href="<?php echo BASE_URL;?>admin">
                                     <div style="text-align: center;">
                                         <i class="fa fa-cog fa-2x"></i>
