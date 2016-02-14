@@ -28,7 +28,8 @@
 
 
         <script src='<?php echo BASE_URL;?>js/jquery.dataTables.min.js'></script>
-        <link rel="stylesheet" type="text/css" href='<?php echo BASE_URL;?>css/jquery.dataTables.min.css'>
+        <!--<link rel="stylesheet" type="text/css" href='<?php echo BASE_URL;?>css/jquery.dataTables.min.css'>-->
+        <link rel="stylesheet" type="text/css" href='<?php echo BASE_URL;?>css/data-table.css'>
 
         <script src='<?php echo BASE_URL;?>js/dataTables.buttons.min.js'></script>
         <script src='<?php echo BASE_URL;?>js/buttons.html5.min.js'></script>
@@ -71,9 +72,46 @@
                     <!-- ########################### -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#"><i class="fa fa-gamepad fa-2x"></i></a></li>
-                            <li><a href="#"><i class="fa fa-trophy fa-2x"></i></a></li>
-                            <li><a href="<?php echo BASE_URL;?>admin"><i class="fa fa-cog fa-2x"></i></a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?php echo BASE_URL;?>admin/addQuizz">
+                                    <div style="text-align: center;">
+                                        <i class="fa fa-plus-circle fa-2x"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?php echo BASE_URL;?>admin/listQuizz">
+                                    <div style="text-align: center;">
+                                        <i class="fa fa-list fa-2x"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?php echo BASE_URL;?>admin/listUser">
+                                    <div style="text-align: center;">
+                                        <i class="fa fa-users fa-2x"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div style="text-align: center;">
+                                        <i class="fa fa-trophy fa-2x"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?php echo BASE_URL;?>admin">
+                                    <div style="text-align: center;">
+                                        <i class="fa fa-cog fa-2x"></i>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

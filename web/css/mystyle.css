@@ -79,3 +79,75 @@ hr.style-eight:after {
     border-radius: 10px;
     text-align: center;
 }
+
+/*=============================*/
+
+.title-quizz{
+    padding-top:7px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #fff;
+}
+
+.play-quizz{
+    padding-top:7px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px; 
+}
+
+.containerIn {
+    width: auto !important; /*just to override your inline CSS */
+    height: 200px; !important; /*just to override your inline CSS */
+    left: 0;
+    right: 0;
+    word-wrap: break-word
+}
+
+.containerIn:hover {
+    background:#fff;
+    opacity:0.3;   
+}
+
+.navbar .navbar-nav > li.divider {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-default {
+    background-color: #fff !important;
+    box-shadow:0px -2px 5px #b757ff;
+}
+
+
+/*==  datatable design  ==*/
+
+/*.dataTables_wrapper .dataTables_paginate .paginate_button.current { border-color: #ffffff; }*/
+.dataTables_paginate a.current, .dataTables_paginate a.current:hover, .dataTables_paginate a.current:focus,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #ffffff !important;
+}
+
+.dataTables_filter input, .dataTables_length select {
+    border: 1px solid #ccd0d4;
+    background: #fff;
+    font-size: 12px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    color: #555;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.dataTables_length select {
+    margin-right: 10px;
+    height: 34px !important;
+    width: auto !important;
+}
+
+div.dataTables_length select {
+    width: 75px;
+    height: 30px;
+    margin-right: 5px;
+}
+

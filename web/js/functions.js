@@ -2,8 +2,32 @@ var base_url = '';
 var questionsIdUnCompleted = new Array();
 var isAnswerSet = false;
 $(document).ready(function(){
+    $(".nav li a")
+        .filter(function () {
+            var val = false;
+            var actual = location.href;
+            actual = actual.split("/");
+            catName = actual[3].split("?");
+            if (location.href == this.href || this.href == window.location.protocol + '//' + actual[2] + '/' + catName[0]) {
+                val = true;
+            }
+            return val;
+        })
+        .parents()
+        .addClass("active");  
+    
+    $(".highlight tr").on("mouseover", function () {
+        if ($(this).attr("name") != "no-hover") {
+            $(this).css("opacity", 0.5);
 
+        }
+    }).on("mouseout", function () {
+
+        $(this).css("opacity", 1);
+    });
 });
+
+
 
 function setBaseUrl(url){
     base_url = url;   
