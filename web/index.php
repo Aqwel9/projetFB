@@ -2,6 +2,7 @@
 //declare(strict_types=1);
 session_start();
 error_reporting(E_ALL);
+date_default_timezone_set('Europe/Paris');
 ini_set('display_errors', '1');
 
 $site_path = realpath(dirname(__FILE__));

@@ -2,8 +2,32 @@ var base_url = '';
 var questionsIdUnCompleted = new Array();
 var isAnswerSet = false;
 $(document).ready(function(){
+    $(".nav li a")
+        .filter(function () {
+            var val = false;
+            var actual = location.href;
+            actual = actual.split("/");
+            catName = actual[3].split("?");
+            if (location.href == this.href || this.href == window.location.protocol + '//' + actual[2] + '/' + catName[0]) {
+                val = true;
+            }
+            return val;
+        })
+        .parents()
+        .addClass("active");  
+    
+    $(".highlight tr").on("mouseover", function () {
+        if ($(this).attr("name") != "no-hover") {
+            $(this).css("opacity", 0.5);
 
+        }
+    }).on("mouseout", function () {
+
+        $(this).css("opacity", 1);
+    });
 });
+
+
 
 function setBaseUrl(url){
     base_url = url;   
@@ -54,8 +78,8 @@ function setQuestion(quizz){
     }
     //initialisation du countdown
     var countdown = $("#countdown").countdown360({
-        radius: 60,
-        seconds: 5,
+        radius: 50,
+        seconds: 10,
         label: false,
         fontColor: '#FFFFFF',
         autostart: false,
@@ -180,7 +204,7 @@ function endOfQuizz(quizz){
             data: { idQuizz: idQuizz, idFb: idFb },
             dataType: 'JSON'
         }).done(function(data, textStatus, jqXHR){
-            $("#quizz").html('<h3 style="text-align:center">Félicitations, vous avez obtenu un score de <b>'+data.message+'</b> !</h3><br><p style="text-align:center">N\'hésitez pas à partager votre score avec vos amis en cliquant sur le bouton ci-dessous : </p><br><button class="fb-share-button-style" onclick="shareFacebook();"><h2><i class="fa fa-facebook-official"></i> Partager !</h2></button>');
+            $("#quizz").html('<div class="row"><div class="col-md-12"><h3 style="text-align:center">Félicitations, vous avez obtenu un score de <b>'+data.message+'</b> !</h3><br><p style="text-align:center">N\'hésitez pas à partager votre score avec vos amis en cliquant sur le bouton ci-dessous : </p></div><br><div class="col-md-12"><button class="fb-share-button-style"  style="min-width:100%; margin-left:0;" onclick="shareFacebook();"><h2><i class="fa fa-facebook-official"></i> Partager !</h2></button></div>');
             NProgress.done();
         }).fail(function(jqXHR, textStatus, errorThrown){
             console.error(jqXHR);

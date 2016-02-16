@@ -331,6 +331,14 @@ class DB {
             return $query['id'];
         }else return false;
     }
+    
+    public function getIdFbByUserId($idPlayer){
+        $query = $this->connexion->prepare('SELECT id_fb FROM player WHERE id = ?');
+        if($query->execute([$idPlayer])){
+            $query = $query->fetch(PDO::FETCH_ASSOC);
+            return $query['id_fb'];
+        }else return false;
+    }
 
     public function insertAnswer($idFb, $idQuestion, $idProposition, $time, $idQuizz){
         $score = 10000 - $time;

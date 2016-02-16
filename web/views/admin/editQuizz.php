@@ -4,8 +4,11 @@
             <a href="<?php echo BASE_URL;?>admin/listQuizz"><i class="fa fa-arrow-left"></i> Revenir à la liste des quizz</a>
         </div>
     </div>
+    <hr>
     <h1 style="text-align:center">Mode édition</h1>
-    <div>
+    <hr>
+    
+    <div class="col-md-12">
         <h3 style="text-align:center">Informations générales</h3>
         <form method="post" action="">
             <div class="row">
@@ -78,12 +81,12 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-10">
-                    <button type="submit" class="btn btn-success" name="submit" value="update">METTRE A JOUR</button>
+                    <button type="submit" class="btn btn-success" name="submit" value="update" style="float:right">METTRE A JOUR</button>
                 </div>
             </div>
         </form>
     </div>
-    <div>
+    <div  class="col-md-12">
         <h3 style="text-align:center">Questions / Réponses</h3>
 
         <?php if(isset($quizz['questions'])){?>
